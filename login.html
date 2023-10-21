@@ -63,7 +63,7 @@
                 const user = userCredential.user;
                 // ...
                 var past_login = new Date();
-                update(ref(database,'Users/' + user.id), {
+                update(ref(database,'Users/' + user.uid), {
                        pastLogin: past_login,
 
                     })

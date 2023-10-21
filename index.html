@@ -58,14 +58,13 @@
         submitBtn.addEventListener('click', (e) =>{
 
             var email = document.getElementById('email').value;
-            //var full_name = document.getElementById('text').value;
             var password = document.getElementById('password').value;
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed up 
                     const user = userCredential.user;
 
-                    set(ref(database,'Users/' + user.id), {
+                    set(ref(database,'Users/' + user.uid), {
                         email: email,
                         password:password
 
