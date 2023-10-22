@@ -238,57 +238,45 @@ function promptResults(e){
 function careerType(){
     //array holds the answer from user choices
     const user_score_array = [];
-    const user_trait_array= [];
     if(extrovert_score > introvert_score){
         user_score_array.push(extrovert_score);
-        user_trait_array.push("Extrovert");
     }else{
         user_score_array.push(introvert_score);
-        user_trait_array.push("Introvert");
 
     }
     if(routine_score > spontaneous_score){
         user_score_array.push(routine_score);
-        user_trait_array.push("Routine");
 
     }else{
         user_score_array.push(spontaneous_score);
-        user_trait_array.push("Spontaneous");
 
 
     }
     if(leader_score > follower_score){
         user_score_array.push(leader_score);
-        user_trait_array.push("Leader");
 
     }else{
         user_score_array.push(follower_score);
-        user_trait_array.push("Follower");
 
 
     }
     if(purpose_score > money_score){
         user_score_array.push(purpose_score);
-        user_trait_array.push("Purpose");
 
     }else{
         user_score_array.push(money_score);
-        user_trait_array.push("Money");
 
 
     }
     if(creative_score > analytical_score){
         user_score_array.push(creative_score);
-        user_trait_array.push("Creative");
 
     }else{
         user_score_array.push(analytical_score);
-        user_trait_array.push("Analytical");
 
 
     }
     console.log(user_score_array);
-    console.log (user_trait_array);
     return user_score_array;
 
 }
