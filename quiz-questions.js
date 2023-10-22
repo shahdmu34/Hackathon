@@ -360,17 +360,17 @@ function sortCareer(){
     if (art.includes(maxTrait)){
         careerArray.push("Art major ");
     }
-    
+    return careerArray;
 }
 
 function user_Result(){
     resetPrompts();
 
-    const user_score_array = careerNames();
+    const careers = sortCareer();
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${careerArray}`;
+    question_elem.innerHTML = `end of quiz! ${careers}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
