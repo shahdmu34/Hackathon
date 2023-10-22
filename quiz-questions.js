@@ -147,7 +147,7 @@ let creative_score = 0;
 let analytical_score = 0;
 
 //career arrays
-const computerScience = ["introver","spontaneous","follower", "money", "analytical"];
+const computerScience = ["introvert","spontaneous","follower", "money", "analytical"];
 const healthCare = ["extrovert", "spontaneous" , "follower" , "purpose", "analytical"];
 const business = ["extrovert", "spontaneous", "money" , "creative"];
 const psych = ["creative" , "routine", "leader", "purpose","analytical" ];
@@ -266,40 +266,40 @@ function careerNames(){
     
     const user_trait_array= [];
     if(extrovert_score > introvert_score){
-        user_trait_array.push("Extrovert");
+        user_trait_array.push("extrovert");
     }else{
-        user_trait_array.push("Introvert");
+        user_trait_array.push("introvert");
 
     }
     if(routine_score > spontaneous_score){
-        user_trait_array.push("Routine");
+        user_trait_array.push("routine");
 
     }else{
-        user_trait_array.push("Spontaneous");
+        user_trait_array.push("spontaneous");
 
 
     }
     if(leader_score > follower_score){
-        user_trait_array.push("Leader");
+        user_trait_array.push("leader");
 
     }else{
-        user_trait_array.push("Follower");
+        user_trait_array.push("follower");
 
 
     }
     if(purpose_score > money_score){
-        user_trait_array.push("Purpose");
+        user_trait_array.push("purpose");
 
     }else{
-        user_trait_array.push("Money");
+        user_trait_array.push("money");
 
 
     }
     if(creative_score > analytical_score){
-        user_trait_array.push("Creative");
+        user_trait_array.push("creative");
 
     }else{
-        user_trait_array.push("Analytical");
+        user_trait_array.push("analytical");
 
 
     }
@@ -307,10 +307,33 @@ function careerNames(){
     return user_trait_array;
 
 }
- function maxTrait(){
+function sortCareer(){
+    const careerArray=[]
     let i = arr.indexOf(Math.max(...user_score_array));
-    return user_trait_array[i];
- }
+    const maxTrait= user_trait_array[i];
+    if (computerScience.includes(maxTrait)){
+        careerArray.push("Computer Science");
+    }
+    if (healthCare.includes(maxTrait)){
+        careerArray.push("HealthCare ");
+    }
+    if (business.includes(maxTrait)){
+        careerArray.push(" business ");
+    }
+    if (psych.includes(maxTrait)){
+        careerArray.push("psych ");
+    }
+    if (law.includes(maxTrait)){
+        careerArray.push("law ");
+    }
+    if (RealEstate.includes(maxTrait)){
+        careerArray.push("real Estate ");
+    }
+    if (art.includes(maxTrait)){
+        careerArray.push("Art major ");
+    }
+    
+}
 
 function user_Result(){
     resetPrompts();
@@ -319,7 +342,7 @@ function user_Result(){
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${user_score_array}`;
+    question_elem.innerHTML = `end of quiz! ${careerArray}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
