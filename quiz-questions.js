@@ -1,3 +1,6 @@
+let user_score_array = [];
+let user_trait_array = [];
+
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
@@ -294,40 +297,40 @@ function careerNames(){
     
     const user_trait_array= [];
     if(extrovert_score > introvert_score){
-        user_trait_array.push("Extrovert");
+        user_trait_array.push("extrovert");
     }else{
-        user_trait_array.push("Introvert");
+        user_trait_array.push("introvert");
 
     }
     if(routine_score > spontaneous_score){
-        user_trait_array.push("Routine");
+        user_trait_array.push("routine");
 
     }else{
-        user_trait_array.push("Spontaneous");
+        user_trait_array.push("spontaneous");
 
 
     }
     if(leader_score > follower_score){
-        user_trait_array.push("Leader");
+        user_trait_array.push("leader");
 
     }else{
-        user_trait_array.push("Follower");
+        user_trait_array.push("follower");
 
 
     }
     if(purpose_score > money_score){
-        user_trait_array.push("Purpose");
+        user_trait_array.push("purpose");
 
     }else{
-        user_trait_array.push("Money");
+        user_trait_array.push("money");
 
 
     }
     if(creative_score > analytical_score){
-        user_trait_array.push("Creative");
+        user_trait_array.push("creative");
 
     }else{
-        user_trait_array.push("Analytical");
+        user_trait_array.push("analytical");
 
 
     }
@@ -337,8 +340,12 @@ function careerNames(){
 }
 function sortCareer(){
     const careerArray=[]
-    let i = arr.indexOf(Math.max(...user_score_array));
-    const maxTrait= user_trait_array[i];
+    const max = Math.max.apply(Math, user_score_array.map((i) => i));
+    const maxIndex = user_score_array.indexOf(max);
+    user_trait_array = careerNames();
+
+
+    const maxTrait= user_trait_array[maxIndex];
     if (computerScience.includes(maxTrait)){
         careerArray.push("Computer Science");
     }
@@ -385,7 +392,7 @@ function nextBtn_funct(){
     }
 }
 
-nextBtn.addEyventListener("click", ()=>{
+nextBtn.addEventListener("click", ()=>{
     if(promptInxdex < quiz_Questions.length){
         nextBtn_funct();
     }else{
@@ -394,5 +401,3 @@ nextBtn.addEyventListener("click", ()=>{
 });
 
 beginQuiz();
-
-
