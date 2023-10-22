@@ -343,11 +343,11 @@ function careerNames(){
 function user_Result(){
     resetPrompts();
 
-    const user_score_array = careerType();
+    const user_score_array = careerNames();
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${user_trait_array}`;
+    question_elem.innerHTML = `end of quiz! ${user_score_array}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
