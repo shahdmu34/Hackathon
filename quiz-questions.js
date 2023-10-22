@@ -2,100 +2,100 @@ const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
         answer: [
-            {text:"Your fists", extrovert: 2},
-            {text:"Archery", introvert: 2 },
-            {text:"Sword" ,extrovert: 1 },
-            {text:"Knife",  introvert: 1 },
+            {text:"Your fists", extrovert: true},
+            {text:"Archery", extrovert: false },
+            {text:"Sword" ,extrovert: false },
+            {text:"Knife",  extrovert: true },
            
         ]
     },
     {
         question: "Choose a power: ",
         answer: [
-            {text:"Invisibility " , introvert: 2 },
-            {text:"Healing", extrovert: 1 },
-            {text:"Flying " , introvert: 1  },
-            {text:"Super strength", extrovert: 2},
+            {text:"Invisibility " , extrovert: false },
+            {text:"Healing", extrovert: true },
+            {text:"Flying " , extrovert: false },
+            {text:"Super strength", extrovert: true},
            
         ]
     },
     {
         question: "You have to pick a road. Do you ",
         answer: [
-            {text:"Go the direct path you already know but long" , routine: 2},
-            {text:"Grab a boat and go", spontaneous: 2  },
-            {text:"Woods is dangerous but shorter", spontaneous:1 },
-            {text:"Go on a road with a map", routine: 1},
+            {text:"Go the direct path you already know but long" , routine: true},
+            {text:"Grab a boat and go", routine: false },
+            {text:"Woods is dangerous but shorter", routine: false },
+            {text:"Go on a road with a map", routine: true},
            
         ]
     },
     {
         question: "A monster shows up. How should you defeat him",
         answer: [
-            {text:"Fight him with your weapon", spontaneous: 2 },
-            {text:"Hide", routine: 2 },
-            {text:"Throw something at it" , spontaneous: 1 },
-            {text:"Talk it out" , routine: 1},
+            {text:"Fight him with your weapon", routine: false },
+            {text:"Hide", routine: true},
+            {text:"Throw something at it" , routine: false },
+            {text:"Talk it out" , routine: true},
            
         ]
     },
     {
         question: "You  find people that are lost in the forest",
         answer: [
-            {text:"Do you lead them" , Leader: 2},
-            {text:"Suggest where they can find help" , follower: 1},
-            {text:"Do you give them directions", Leader: 1 },
-            {text:"Don’t help they seem suspicious", follower: 2},
+            {text:"Do you lead them" , Leader: true},
+            {text:"Suggest where they can find help" , Leader: false},
+            {text:"Do you give them directions", Leader: true},
+            {text:"Don’t help they seem suspicious", Leader: false},
            
         ]
     },
     {
         question: "choose your companion",
         answer: [
-            {text:"Fast Cat" , Leader:  1},
-            {text:"Vision Bird" ,Leader: 2 },
-            {text:"Buff Ants" , follower: 1 },
-            {text:"Good bite Dog" , follower: 2 },
+            {text:"Fast Cat" , Leader:  true},
+            {text:"Vision Bird" ,Leader: true},
+            {text:"Buff Ants" , Leader: false },
+            {text:"Good bite Dog" , Leader: false},
            
         ]
     },
     {
         question: "A wall you need to cross with a guard",
         answer: [
-            {text:"Dig a hole and go under", creative: 1 },
-            {text:"Build a ladder with things you find around you" , creative: 2 },
-            {text:"Look for any hidden entrance", analytical: 2 },
-            {text:"Bargain with the guard" , analytical: 1},
+            {text:"Dig a hole and go under", creative: true },
+            {text:"Build a ladder with things you find around you" , creative: true },
+            {text:"Look for any hidden entrance", creative: false },
+            {text:"Bargain with the guard" , creative: false},
            
         ]
     },
     {
         question: "You meet a turtle what do you do?",
         answer: [
-            {text:"Say hi(but judge the turtle)" , analytical: 2 },
-            {text:"Ignore the turtle" , analytical: 1},
-            {text:"Ask the turtle a question" , creative: 1 },
-            {text:"Befriend the turtle" , creative: 2},
+            {text:"Say hi(but judge the turtle)" , creative: false },
+            {text:"Ignore the turtle" , creative: false},
+            {text:"Ask the turtle a question" , creative: true },
+            {text:"Befriend the turtle" , creative: true},
            
         ]
     },
     {
         question: "Someone asks for money. Do you",
         answer: [
-            {text:"give it to them" , purpose: 2},
-            {text:"Give a little" , purpose: 1 },
-            {text:"trade it for something" , money:1 },
-            {text:"Apologize", money: 2 },
+            {text:"give it to them" , purpose: true},
+            {text:"Give a little" , purpose: true },
+            {text:"trade it for something" , purpose:false },
+            {text:"Apologize", purpose: false },
            
         ]
     },
     {
         question: "What is your adventure:",
         answer: [
-            {text:"Chasing a bounty", money: 2 },
-            {text:"Become the strongest in the realm" , money:1},
-            {text:"Save your bestie(turtle)" ,purpose: 2},
-            {text:"Explore the world and learn" , purpose: 1 },
+            {text:"Chasing a bounty", purpose: false },
+            {text:"Become the strongest in the realm" , purpose: false},
+            {text:"Save your bestie(turtle)" ,purpose: true},
+            {text:"Explore the world and learn" , purpose: true},
            
         ]
     }
@@ -147,13 +147,19 @@ let creative_score = 0;
 let analytical_score = 0;
 
 //career arrays
-const computerScience = ["introvert","spontaneous","follower", "money", "analytical"];
-const healthCare = ["extrovert", "spontaneous" , "follower" , "purpose", "analytical"];
-const business = ["extrovert", "spontaneous", "money" , "creative"];
-const psych = ["creative" , "routine", "leader", "purpose","analytical" ];
-const law = ["introvert", "routine", "follower", "purpose", "analytical"  ];
-const art = ["extrovert", "spontaneous" , "leader", "purpose" , "creative"  ];
-const RealEstate = ["extrovert", "spontaneous", "follower", "leader", "analytical"];
+const computerScience = ["1","0","0", "0", "0"];
+const healthCare = ["2", "1" , "0" , "2", "0"];
+const business = ["1", "0", "0" , "2"];
+const psych = ["1" , "2", "2", "2","0" ];
+const law = ["2", "1", "0", "1", "0"  ];
+const art = ["2", "0" , "2", "2" , "2"  ];
+const RealEstate = ["2", "0", "0", "2", "0"];
+const GraphicDesign = ["2", "1", "0" , "0", "2"];
+const marketing = ["2", "0", "2", "0", "0", "0"];
+const researcher = ["0", "0" , "0", "2", "2"];
+const doctor = ["2" , "2", "0", "2", "0"];
+
+let user_anser_array =[];
 
 //start quiz
 function beginQuiz(){
@@ -162,15 +168,10 @@ function beginQuiz(){
     answer_promt = [];
     
     extrovert_score =0;
-    introvert_score = 0;
     routine_score = 0;
-    spontaneous_score = 0;
     leader_score = 0;
-    follower_score = 0;
     purpose_score = 0;
-    money_score = 0;
     creative_score = 0;
-    analytical_score = 0;
     
    nextBtn.innerHTML = "Next";
     displayPrompts();
@@ -187,19 +188,22 @@ function displayPrompts(){
         const btn = document.createElement("button");
         btn.innerHTML = answers.text;
         btn.classList.add("btn");
-        //store score for each trait
-        btn.dataset.extrovert = answers.extrovert;
-        btn.dataset.introvert = answers.introvert;
-        btn.dataset.routine = answers.routine;
-        btn.dataset.spontaneous = answers.spontaneous;
-        btn.dataset.Leader = answers.Leader;
-        btn.dataset.follower = answers.follower;
-        btn.dataset.purpose = answers.purpose;
-        btn.dataset.money = answers.money;
-        btn.dataset.creative = answers.creative;
-        btn.dataset.analytical = answers.analytical;
-
         userAnswer.appendChild(btn);
+
+        //store score for each trait
+        if(answers.extrovert){
+            btn.dataset.extrovert = answers.extrovert;
+        }else if(answers.routine){
+            btn.dataset.routine = answers.routine;
+        }else if(answers.Leader){
+            btn.dataset.Leader = answers.Leader;
+        }else if(answers.creative){
+            btn.dataset.creative = answers.creative;
+        }else if(answers.purpose){
+            btn.dataset.purpose = answers.purpose;
+        }
+
+
         btn.addEventListener("click", promptResults );
 
     });
@@ -215,141 +219,113 @@ function resetPrompts(){
 //needed so that the answer options appear - linked to the display prompts function
 function promptResults(e){
     const btnSelect = e.target;
-    const extrovertNum = parseInt(btnSelect.dataset.extrovert);
-    const introvertNum = parseInt(btnSelect.dataset.introvert);
-    const routineNum = parseInt(btnSelect.dataset.routine);
-    const spontaneousNum = parseInt(btnSelect.dataset.spontaneous);
-    const followerNum = parseInt(btnSelect.dataset.follower);
-    const leaderNum = parseInt(btnSelect.dataset.leader);
-    const purposeNum = parseInt(btnSelect.dataset.purpose);
-    const moneyNum = parseInt(btnSelect.dataset.money);
-    const creativeNum = parseInt(btnSelect.dataset.creative);
-    const analyticalNum = parseInt(btnSelect.dataset.analytical);
-   //need to store the score based on the option selected
+    const isExtrovert = btnSelect.dataset.extrovert ==="true";
+    const isRoutine = btnSelect.dataset.routine ==="true";
+    const isLeader = btnSelect.dataset.law ==="true";
+    const isCreative = btnSelect.dataset.creative ==="true";
+    const isPurpose = btnSelect.dataset.purpose ==="true";
 
-    extrovert_score += extrovertNum;
-    introvert_score += introvertNum;
-    routine_score +=routineNum;
-    spontaneous_score += spontaneousNum;
-    follower_score += followerNum;
-    leader_score += leaderNum;
-    purpose_score += purposeNum;
-    money_score += moneyNum;
-    creative_score += creativeNum;
-    analytical_score += analyticalNum;
-   
-   
+    if(isExtrovert){
+        btnSelect.classList.add("extrovert");
+        extrovert_score++;
+    }else{
+        btnSelect.classList.add("introvert");
+    }
     
-    nextBtn.style.display = "block";
-}
-let user_trait_array = [];
-
-
-function careerType(){
-    //array holds the answer from user choices
+    if(isRoutine){
+        btnSelect.classList.add("routine");
+        routine_score++;
+    }else{
+        btnSelect.classList.add("spontaneous");
+    }
+       
+    if(isLeader){
+        btnSelect.classList.add("leader");
+        leader_score++;
+    }else{
+        btnSelect.classList.add("follower");
+    }
     
-    const user_score_array = [];
-    user_trait_array = [];
-    if(extrovert_score > introvert_score){
-        user_score_array.push(extrovert_score);
-        user_trait_array.push("extrovert");
-
+    if(isPurpose){
+        btnSelect.classList.add("purpose");
+        purpose_score++;
     }else{
-        user_score_array.push(introvert_score);
-        user_trait_array.push("introvert");
-
-
+        btnSelect.classList.add("money");
     }
-    if(routine_score > spontaneous_score){
-        user_score_array.push(routine_score);
-        user_trait_array.push("routine");
-
-
+        
+    if(isCreative){
+        btnSelect.classList.add("creative");
+        creative_score++;
     }else{
-        user_score_array.push(spontaneous_score);
-        user_trait_array.push("spontaneous");
-
+        btnSelect.classList.add("analytical");
     }
-    if(leader_score > follower_score){
-        user_score_array.push(leader_score);
-        user_trait_array.push("leader");
-
-
-    }else{
-        user_score_array.push(follower_score);
-        user_trait_array.push("follower");
-
-
-
-    }
-    if(purpose_score > money_score){
-        user_score_array.push(purpose_score);
-        user_trait_array.push("purpose");
-
-
-    }else{
-        user_score_array.push(money_score);
-        user_trait_array.push("money");
-
-
-
-    }
-    if(creative_score > analytical_score){
-        user_score_array.push(creative_score);
-        user_trait_array.push("creative");
-
-
-    }else{
-        user_score_array.push(analytical_score);
-        user_trait_array.push("analytical");
-
-
-
-    }
-    console.log(user_trait_array);
-    return {user_score_array , user_trait_array};
-
+    
+    Array.from(userAnswer.children).forEach(btn => {
+        if(btn.dataset.extrovert){
+            btn.classList.add("extrovert");
+        }else if(btn.dataset.routine){
+            btn.classList.add("routine")
+        }else if(btn.dataset.Leader){
+            btn.classList.add("leader")
+        }else if(btn.dataset.purpose){
+            btn.classList.add("purpose")
+        }else if(btn.dataset.creative){
+            btn.classList.add("creative")
+        }
+        btn.ariaDisabled = true;
+    });
+    
+    
+   nextBtn.style.display = "block";
 }
-
-function sortCareer(){
-    const {user_score_array , user_trait_array} = careerType();
-   const careerArray = [];
-    const i = user_score_array.indexOf(Math.max(...user_score_array));
-    const maxTrait = user_trait_array[i];
-
-    if (computerScience.includes(maxTrait)){
-        careerArray.push("Computer Science");
-    }
-    if (healthCare.includes(maxTrait)){
-        careerArray.push("HealthCare ");
-    }
-    if (business.includes(maxTrait)){
-        careerArray.push(" business ");
-    }
-    if (psych.includes(maxTrait)){
-        careerArray.push("psych ");
-    }
-    if (law.includes(maxTrait)){
-        careerArray.push("law ");
-    }
-    if (RealEstate.includes(maxTrait)){
-        careerArray.push("real Estate ");
-    }
-    if (art.includes(maxTrait)){
-        careerArray.push("Art major ");
-    }
-    return careerArray;
-}
-
 
 function user_Result(){
     resetPrompts();
+    result = ""
 
-    const careers = sortCareer();
+   // const careers = sortCareer();
+   const user_anser_array = [];
+   user_anser_array.push(extrovert_score ,routine_score, leader_score, purpose_score , creative_score);
+   if(computerScience.length === user_anser_array.length){
+        result = "computerScience";
+   }else if(healthCare.length === user_anser_array.length)
+   {
+    result = "health care";
+   }else if(business.length === user_anser_array.length)
+   {
+    result = "Business";
+   }else if(psych.length === user_anser_array.length)
+   {
+    result = "psych";
+   }else if(law.length === user_anser_array.length)
+   {
+    result = "law";
+   }else if(art.length === user_anser_array.length)
+   {
+    result = "Art";
+   }else if(researcher.length === user_anser_array.length)
+   {
+    result = "researcher";
+   }else if(GraphicDesign.length === user_anser_array.length)
+   {
+    result = "Graphic Design";
+   }else if(GraphicDesign.length === user_anser_array.length)
+   {
+    result = "Graphic Design";
+   }else if(doctor.length === user_anser_array.length)
+   {
+    result = "Doctor";
+   }else if(marketing.length === user_anser_array.length)
+   {
+    result = "Marketing";
+   }else{
+    //default statement if score doesnt match any career path
+    result = "computerScience";
+    }
 
-  
+
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${careers}`;
+    question_elem.innerHTML = `end of quiz! ${result} `;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
