@@ -1,3 +1,4 @@
+
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
@@ -306,37 +307,41 @@ function careerType(){
     //array holds the answer from user choices
     const user_score_array = [];
     if(extrovert_score > introvert_score){
-        user_score_array.push("extrovert");
+        user_score_array.push(extrovert_score);
     }else{
-        user_score_array.push("introvert");
+        user_score_array.push(introvert_score);
     }
     if(routine_score > spontaneous_score){
-        user_score_array.push("routine");
+        user_score_array.push(routine_score);
     }else{
-        user_score_array.push("spontaneous");
+        user_score_array.push(spontaneous_score);
 
     }
     if(leader_score > follower_score){
-        user_score_array.push("leader");
+        user_score_array.push(leader_score);
     }else{
-        user_score_array.push("follower");
+        user_score_array.push(follower_score);
 
     }
     if(purpose_score > money_score){
-        user_score_array.push("purpose");
+        user_score_array.push(purpose_score);
     }else{
-        user_score_array.push("money");
+        user_score_array.push(money_score);
 
     }
     if(creative_score > analytical_score){
-        user_score_array.push("creative");
+        user_score_array.push(creative_score);
     }else{
-        user_score_array.push("analytical");
+        user_score_array.push(analytical_score);
 
     }
     console.log(user_score_array);
     return user_score_array;
+
 }
+ function max(){
+    
+ }
 
 
 function user_Result(){
