@@ -287,42 +287,48 @@ function user_Result(){
    result = ""
 
    if(computerScience.length === user_anser_array.length){
-        result = "computerScience";
-   }else if(healthCare.length === user_anser_array.length)
+        result += " computerScience";
+   }
+   if(healthCare.length === user_anser_array.length)
    {
-    result = "health care";
-   }else if(business.length === user_anser_array.length)
+    result += " health care";
+   }
+   if(business.length === user_anser_array.length)
    {
-    result = "Business";
-   }else if(psych.length === user_anser_array.length)
+    result += " Business";
+   }
+   if(psych.length === user_anser_array.length)
    {
-    result = "psych";
-   }else if(law.length === user_anser_array.length)
+    result += " psych";
+   }
+   if(law.length === user_anser_array.length)
    {
-    result = "law";
-   }else if(art.length === user_anser_array.length)
+    result += " law";
+   }
+   if(art.length === user_anser_array.length)
    {
-    result = "Art";
-   }else if(researcher.length === user_anser_array.length)
+    result += " Art";
+   }
+   if(researcher.length === user_anser_array.length)
    {
-    result = "researcher";
-   }else if(GraphicDesign.length === user_anser_array.length)
+    result += " researcher";
+   }
+   if(GraphicDesign.length === user_anser_array.length)
    {
-    result = "Graphic Design";
-   }else if(GraphicDesign.length === user_anser_array.length)
+    result += " Graphic Design";
+   }
+   if(GraphicDesign.length === user_anser_array.length)
    {
-    result = "Graphic Design";
-   }else if(doctor.length === user_anser_array.length)
+    result+= " Graphic Design";
+   }
+   if(doctor.length === user_anser_array.length)
    {
-    result = "Doctor";
-   }else if(marketing.length === user_anser_array.length)
+    result += " Doctor";
+   }
+   if(marketing.length === user_anser_array.length)
    {
-    result = "Marketing";
-   }else{
-    //default statement if score doesnt match any career path
-//result = "computerScience";
-    }
-
+    result += " Marketing";
+   }
 
     //output the answer
     question_elem.innerHTML = `end of quiz! ${result} `;
