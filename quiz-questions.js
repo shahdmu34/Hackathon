@@ -286,6 +286,30 @@ function user_Result(){
    const user_anser_array = [extrovert_score ,routine_score, leader_score, purpose_score , creative_score];
    result = ""
 
+   if(arrayComparison(user_anser_array, computerScience)){
+        result = "computer science";
+   }else if(arrayComparison(user_anser_array, healthCare)){
+        result = "healthcare";
+   }else if(arrayComparison(user_anser_array, business)){
+        result = "business";
+    }else if(arrayComparison(user_anser_array, psych)){
+        result = "psych";
+    }else if(arrayComparison(user_anser_array, law)){
+        result = "law";
+    }else if(arrayComparison(user_anser_array, art)){
+        result = "art";
+   }else if(arrayComparison(user_anser_array, researcher)){
+    result = "researcher";
+    }else if(arrayComparison(user_anser_array, GraphicDesign)){
+        result = "GraphicDesign";
+    }else if(arrayComparison(user_anser_array, marketing)){
+        result = "marketing";
+    }else if(arrayComparison(user_anser_array, RealEstate)){
+        result = "RealEstate";
+    }else if(arrayComparison(user_anser_array, doctor)){
+        result = "doctor";
+    }
+/*
    if(computerScience.length === user_anser_array.length){
         result += " computerScience";
    }
@@ -329,11 +353,25 @@ function user_Result(){
    {
     result += " Marketing";
    }
-
+*/
     //output the answer
     question_elem.innerHTML = `end of quiz! ${result} `;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
+}
+
+function arrayComparison(arr1 , arr2){
+    if (arr1.length !== arr2.length) {
+        return false;
+    }else{
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                return false; // Return false if a mismatch is found
+            }
+        }
+        return true;
+    }
+   
 }
 
 function nextBtn_funct(){
