@@ -242,105 +242,81 @@ function promptResults(e){
     
     nextBtn.style.display = "block";
 }
+let user_trait_array = [];
+
 
 function careerType(){
     //array holds the answer from user choices
+    
     const user_score_array = [];
+    user_trait_array = [];
     if(extrovert_score > introvert_score){
         user_score_array.push(extrovert_score);
+        user_trait_array.push("extrovert");
+
     }else{
         user_score_array.push(introvert_score);
+        user_trait_array.push("introvert");
+
 
     }
     if(routine_score > spontaneous_score){
         user_score_array.push(routine_score);
+        user_trait_array.push("routine");
+
 
     }else{
         user_score_array.push(spontaneous_score);
-
+        user_trait_array.push("spontaneous");
 
     }
     if(leader_score > follower_score){
         user_score_array.push(leader_score);
+        user_trait_array.push("leader");
+
 
     }else{
         user_score_array.push(follower_score);
+        user_trait_array.push("follower");
+
 
 
     }
     if(purpose_score > money_score){
         user_score_array.push(purpose_score);
+        user_trait_array.push("purpose");
+
 
     }else{
         user_score_array.push(money_score);
+        user_trait_array.push("money");
+
 
 
     }
     if(creative_score > analytical_score){
         user_score_array.push(creative_score);
+        user_trait_array.push("creative");
+
 
     }else{
         user_score_array.push(analytical_score);
+        user_trait_array.push("analytical");
+
 
 
     }
     console.log(user_score_array);
-    return user_score_array;
+    return {user_score_array , user_trait_array};
 
 }
 
-function careerNames(){
-    //array holds the answer from user choices
-    
-    const user_trait_array= [];
-    if(extrovert_score > introvert_score){
-        user_trait_array.push("extrovert");
-    }else{
-        user_trait_array.push("introvert");
-
-    }
-    if(routine_score > spontaneous_score){
-        user_trait_array.push("routine");
-
-    }else{
-        user_trait_array.push("spontaneous");
-
-
-    }
-    if(leader_score > follower_score){
-        user_trait_array.push("leader");
-
-    }else{
-        user_trait_array.push("follower");
-
-
-    }
-    if(purpose_score > money_score){
-        user_trait_array.push("purpose");
-
-    }else{
-        user_trait_array.push("money");
-
-
-    }
-    if(creative_score > analytical_score){
-        user_trait_array.push("creative");
-
-    }else{
-        user_trait_array.push("analytical");
-
-
-    }
-    console.log (user_trait_array);
-    return user_trait_array;
-
-}
 function sortCareer(){
-    const careerArray=[]
-    const max = Math.max.apply(Math, user_score_array.map((i) => i));
-    const maxIndex = user_score_array.indexOf(max);
+    const {user_score_array , user_trait_array} = careerType();
+   const careerArray = [];
+    const i = user_score_array.indexOf(Math, max(...user_score_array));
+    const maxTrait = user_trait_array[i];
 
-    const maxTrait= user_trait_array[maxIndex];
     if (computerScience.includes(maxTrait)){
         careerArray.push("Computer Science");
     }
@@ -373,7 +349,7 @@ function user_Result(){
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${careers}`;
+    question_elem.innerHTML = `end of quiz! ${careers.join(', ')}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
