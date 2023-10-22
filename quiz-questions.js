@@ -289,7 +289,7 @@ function user_Result(){
     resetPrompts();
 
    // const careers = sortCareer();
-<<<<<<< HEAD
+
    const user_anser_array = [extrovert_score ,routine_score, leader_score, purpose_score , creative_score];
    result = ""
 
@@ -361,10 +361,7 @@ function user_Result(){
     result += " Marketing";
    }
 */
-=======
- 
 
->>>>>>> 2b13fb120f58e6ba2a49bd3acefa07f8515bfdf3
     //output the answer
     resetPrompts();
 
