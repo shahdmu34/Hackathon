@@ -337,8 +337,10 @@ function careerNames(){
 }
 function sortCareer(){
     const careerArray=[]
-    let i = arr.indexOf(Math.max(...user_score_array));
-    const maxTrait= user_trait_array[i];
+    const max = Math.max.apply(Math, user_score_array.map((i) => i));
+    const maxIndex = user_score_array.indexOf(max);
+
+    const maxTrait= user_trait_array[maxIndex];
     if (computerScience.includes(maxTrait)){
         careerArray.push("Computer Science");
     }
