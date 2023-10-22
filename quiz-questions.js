@@ -347,7 +347,7 @@ function user_Result(){
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${user_score_array}`;
+    question_elem.innerHTML = `end of quiz! ${user_trait_array}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
