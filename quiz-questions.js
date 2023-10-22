@@ -145,7 +145,6 @@ let purpose_score =0;
 let money_score = 0;
 let creative_score = 0;
 let analytical_score = 0;
-let result ="";
 
 //career arrays
 const computerScience = ["1","0","0", "0", "0"];
@@ -284,9 +283,8 @@ function user_Result(){
     resetPrompts();
 
    // const careers = sortCareer();
-   const user_anser_array = [];
-   user_anser_array.push(extrovert_score ,routine_score, leader_score, purpose_score , creative_score);
-   const result = ""
+   const user_anser_array = [extrovert_score ,routine_score, leader_score, purpose_score , creative_score];
+   result = ""
 
    if(computerScience.length === user_anser_array.length){
         result = "computerScience";
