@@ -2,7 +2,7 @@ const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
         answer: [
-            {text:"Your fists", extrovert: 2, int},
+            {text:"Your fists", extrovert: 2},
             {text:"Archery", introvert: 2 },
             {text:"Sword" ,extrovert: 1 },
             {text:"Knife",  introvert: 1 },
@@ -85,7 +85,7 @@ const quiz_Questions = [
             {text:"give it to them" , purpose: 2},
             {text:"Give a little" , purpose: 1 },
             {text:"trade it for something" , money:1 },
-            {text:"Apologize", money: 1 },
+            {text:"Apologize", money: 2 },
            
         ]
     },
@@ -187,31 +187,19 @@ function displayPrompts(){
         const btn = document.createElement("button");
         btn.innerHTML = answers.text;
         btn.classList.add("btn");
+        //store score for each trait
+        btn.dataset.extrovert = answers.extrovert;
+        btn.dataset.introvert = answers.introvert;
+        btn.dataset.routine = answers.routine;
+        btn.dataset.spontaneous = answers.spontaneous;
+        btn.dataset.Leader = answers.Leader;
+        btn.dataset.follower = answers.follower;
+        btn.dataset.purpose = answers.purpose;
+        btn.dataset.money = answers.money;
+        btn.dataset.creative = answers.creative;
+        btn.dataset.analytical = answers.analytical;
+
         userAnswer.appendChild(btn);
-        //answer_promt.push(quiz_Questions.qId);
-      
-        if(answers.extrovert){
-            btn.dataset.extrovert = answers.extrovert;
-        }else if(answers.introvert){
-            btn.dataset.introvert = answers.introvert;
-        }else if(answers.routine){
-            btn.dataset.routine = answers.routine;
-        }else if(answers.spontaneous){
-            btn.dataset.spontaneous = answers.spontaneous;
-        }else if(answers.Leader){
-            btn.dataset.Leader = answers.Leader;
-        }else if(answers.follower){
-            btn.dataset.follower = answers.follower;
-        }else if(answers.purpose){
-            btn.dataset.purpose = answers.purpose;
-        }else if(answers.money){
-            btn.dataset.money = answers.money;
-        }else if(answers.creative){
-            btn.dataset.creative = answers.creative;
-        }else if(answers.analytical){
-            btn.dataset.analytical = answers.analytical;
-        }
-        
         btn.addEventListener("click", promptResults );
 
     });
@@ -225,7 +213,15 @@ function resetPrompts(){
 
 
 
+function promptResults(e){
+    const btnSelect = e.target;
+   
+   //need to store the score based on the option selected
+   if()
 
+    
+    nextBtn.style.display = "block";
+}
 
 function careerType(){
     //array holds the answer from user choices
