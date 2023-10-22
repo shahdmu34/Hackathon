@@ -1,4 +1,3 @@
-
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
@@ -342,7 +341,6 @@ function careerType(){
  function max(){
     
  }
-
 
 function user_Result(){
     resetPrompts();
