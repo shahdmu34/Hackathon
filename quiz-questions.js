@@ -250,37 +250,94 @@ function careerType(){
         user_score_array.push(extrovert_score);
     }else{
         user_score_array.push(introvert_score);
+
     }
     if(routine_score > spontaneous_score){
         user_score_array.push(routine_score);
+
     }else{
         user_score_array.push(spontaneous_score);
+
 
     }
     if(leader_score > follower_score){
         user_score_array.push(leader_score);
+
     }else{
         user_score_array.push(follower_score);
+
 
     }
     if(purpose_score > money_score){
         user_score_array.push(purpose_score);
+
     }else{
         user_score_array.push(money_score);
+
 
     }
     if(creative_score > analytical_score){
         user_score_array.push(creative_score);
+
     }else{
         user_score_array.push(analytical_score);
+
 
     }
     console.log(user_score_array);
     return user_score_array;
 
 }
- function max(){
+
+function careerNames(){
+    //array holds the answer from user choices
     
+    const user_trait_array= [];
+    if(extrovert_score > introvert_score){
+        user_trait_array.push("Extrovert");
+    }else{
+        user_trait_array.push("Introvert");
+
+    }
+    if(routine_score > spontaneous_score){
+        user_trait_array.push("Routine");
+
+    }else{
+        user_trait_array.push("Spontaneous");
+
+
+    }
+    if(leader_score > follower_score){
+        user_trait_array.push("Leader");
+
+    }else{
+        user_trait_array.push("Follower");
+
+
+    }
+    if(purpose_score > money_score){
+        user_trait_array.push("Purpose");
+
+    }else{
+        user_trait_array.push("Money");
+
+
+    }
+    if(creative_score > analytical_score){
+        user_trait_array.push("Creative");
+
+    }else{
+        user_trait_array.push("Analytical");
+
+
+    }
+    console.log (user_trait_array);
+    return user_trait_array;
+
+}
+ function maxTrait(){
+    let i = arr.indexOf(Math.max(...user_score_array));
+    return user_trait_array[i];
  }
 
 function user_Result(){
