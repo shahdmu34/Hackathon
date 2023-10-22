@@ -385,7 +385,7 @@ function nextBtn_funct(){
     }
 }
 
-nextBtn.addEyventListener("click", ()=>{
+nextBtn.addEventListener("click", ()=>{
     if(promptInxdex < quiz_Questions.length){
         nextBtn_funct();
     }else{
