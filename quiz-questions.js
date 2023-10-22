@@ -212,8 +212,36 @@ function resetPrompts(){
 }
 
 
+//needed so that the answer options appear - linked to the display prompts function
+function promptResults(e){
+    const btnSelect = e.target;
+    const extrovertNum = parseInt(btnSelect.dataset.extrovert);
+    const introvertNum = parseInt(btnSelect.dataset.introvert);
+    const routineNum = parseInt(btnSelect.dataset.routine);
+    const spontaneousNum = parseInt(btnSelect.dataset.spontaneous);
+    const followerNum = parseInt(btnSelect.dataset.follower);
+    const leaderNum = parseInt(btnSelect.dataset.leader);
+    const purposeNum = parseInt(btnSelect.dataset.purpose);
+    const moneyNum = parseInt(btnSelect.dataset.money);
+    const creativeNum = parseInt(btnSelect.dataset.creative);
+    const analyticalNum = parseInt(btnSelect.dataset.analytical);
+   //need to store the score based on the option selected
 
-
+    extrovert_score += extrovertNum;
+    introvert_score += introvertNum;
+    routine_score +=routineNum;
+    spontaneous_score += spontaneousNum;
+    follower_score += followerNum;
+    leader_score += leaderNum;
+    purpose_score += purposeNum;
+    money_score += moneyNum;
+    creative_score += creativeNum;
+    analytical_score += analyticalNum;
+   
+   
+    
+    nextBtn.style.display = "block";
+}
 
 function careerType(){
     //array holds the answer from user choices
@@ -338,7 +366,7 @@ function sortCareer(){
 function user_Result(){
     resetPrompts();
 
-    const user_score_array = careerType();
+    const user_score_array = careerNames();
 
   
     //output the answer
