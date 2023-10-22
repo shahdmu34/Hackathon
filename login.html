@@ -53,7 +53,7 @@
         //intilize database
         const database = getDatabase(app);
 
-        submitBtn.addEvenetListner('click', (e) =>{
+        submitBtn.addEventListener('click', (e) =>{
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
 
@@ -81,6 +81,8 @@
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                alert(errorMessage);
+
             });
         })
 
