@@ -306,7 +306,7 @@ function careerType(){
 
 
     }
-    console.log(user_score_array);
+    console.log(user_trait_array);
     return {user_score_array , user_trait_array};
 
 }
@@ -349,7 +349,7 @@ function user_Result(){
 
   
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${careers.join(', ')}`;
+    question_elem.innerHTML = `end of quiz! ${careers}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
