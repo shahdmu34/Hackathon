@@ -164,15 +164,15 @@ let user_anser_array =[];
 //start quiz
 function beginQuiz(){
     promptInxdex = 0;
-    user_score_array = [];
     answer_promt = [];
-    
     extrovert_score =0;
     routine_score = 0;
     leader_score = 0;
     purpose_score = 0;
     creative_score = 0;
-    
+    score_array = [];
+
+
    nextBtn.innerHTML = "Next";
     displayPrompts();
 
@@ -230,6 +230,7 @@ function promptResults(e){
         extrovert_score++;
     }else{
         btnSelect.classList.add("introvert");
+        introvert_score++;
     }
     
     if(isRoutine){
@@ -237,6 +238,7 @@ function promptResults(e){
         routine_score++;
     }else{
         btnSelect.classList.add("spontaneous");
+        spontaneous_score++;
     }
        
     if(isLeader){
@@ -244,6 +246,7 @@ function promptResults(e){
         leader_score++;
     }else{
         btnSelect.classList.add("follower");
+        follower_score++;
     }
     
     if(isPurpose){
@@ -251,6 +254,7 @@ function promptResults(e){
         purpose_score++;
     }else{
         btnSelect.classList.add("money");
+        money_score++;
     }
         
     if(isCreative){
@@ -258,7 +262,9 @@ function promptResults(e){
         creative_score++;
     }else{
         btnSelect.classList.add("analytical");
+        analytical_score++;
     }
+    score_array = [extrovert_score, introvert_score, routine_score, spontaneous_score, leader_score, follower_score, purpose_score, money_score, creative_score, analytical_score];
     
     Array.from(userAnswer.children).forEach(btn => {
         if(btn.dataset.extrovert){
@@ -283,57 +289,69 @@ function user_Result(){
     resetPrompts();
 
    // const careers = sortCareer();
-   const user_anser_array = [extrovert_score ,routine_score, leader_score, purpose_score , creative_score];
-   result = ""
-
-   if(computerScience.length === user_anser_array.length){
-        result += " computerScience";
-   }
-   if(healthCare.length === user_anser_array.length)
-   {
-    result += " health care";
-   }
-   if(business.length === user_anser_array.length)
-   {
-    result += " Business";
-   }
-   if(psych.length === user_anser_array.length)
-   {
-    result += " psych";
-   }
-   if(law.length === user_anser_array.length)
-   {
-    result += " law";
-   }
-   if(art.length === user_anser_array.length)
-   {
-    result += " Art";
-   }
-   if(researcher.length === user_anser_array.length)
-   {
-    result += " researcher";
-   }
-   if(GraphicDesign.length === user_anser_array.length)
-   {
-    result += " Graphic Design";
-   }
-   if(GraphicDesign.length === user_anser_array.length)
-   {
-    result+= " Graphic Design";
-   }
-   if(doctor.length === user_anser_array.length)
-   {
-    result += " Doctor";
-   }
-   if(marketing.length === user_anser_array.length)
-   {
-    result += " Marketing";
-   }
+ 
 
     //output the answer
-    question_elem.innerHTML = `end of quiz! ${result} `;
-    nextBtn.innerHTML = `Back TO Home Page!`;
-   // nextBtn.style.display = "block";
+    resetPrompts();
+
+    const careerSuggestion = suggestCareer();
+
+    question_elem.innerHTML = `End of quiz! ${careerSuggestion}`;
+    nextBtn.innerHTML = `Back To Home Page!`;
+}
+   
+   
+function suggestCareer() {
+    const traitScores = [
+        extrovert_score, routine_score, leader_score, purpose_score, creative_score, introvert_score,spontaneous_score,follower_score,money_score,analytical_score
+    ];
+
+    const traits = ['Extrovert', 'Routine', 'Leader', 'Purpose', 'Creative', 'Introvert', 'Spontaneous', 'Follower','Money', 'Analytical'];
+
+    // Find the dominant trait
+    const maxScore = Math.max(...traitScores);
+    const dominantTraitIndex = traitScores.indexOf(maxScore);
+    const dominantTrait = traits[dominantTraitIndex];
+
+    // Match the dominant trait to career options
+    let careerSuggestion = '';
+
+    switch(dominantTrait) {
+        case 'Extrovert':
+            careerSuggestion = "Business, psych, healthcare";
+            break;
+        case 'Routine':
+            careerSuggestion = "Accounting, data analytics, idk 2 is enough";
+            break;
+        case 'Leader':
+            careerSuggestion = "Management, business";
+            break;
+        case 'Purpose':
+            careerSuggestion = "Social Work, healthcare";
+            break;
+        case 'Creative':
+            careerSuggestion = "Graphic Design, art, music";
+            break;
+        case 'Introvert':
+            careerSuggestion=  "Computer Science";
+            break;
+        case 'Spontaneous':
+            careerSuggestion="Investigator";
+            break;
+        case 'Money' :
+            careerSuggestion= "Investor";
+            break;
+        case 'Follower':
+            careerSuggestion= "finance";
+            break;
+        case 'Analytical':
+            careerSuggestion= "mathematics";
+            break;
+        default:
+            careerSuggestion = " ";
+    }
+
+    return careerSuggestion;
 }
 
 function nextBtn_funct(){
