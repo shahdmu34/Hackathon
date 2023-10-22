@@ -314,7 +314,7 @@ function careerType(){
 function sortCareer(){
     const {user_score_array , user_trait_array} = careerType();
    const careerArray = [];
-    const i = user_score_array.indexOf(Math, max(...user_score_array));
+    const i = user_score_array.indexOf(Math.max(...user_score_array));
     const maxTrait = user_trait_array[i];
 
     if (computerScience.includes(maxTrait)){
