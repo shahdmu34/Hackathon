@@ -1,9 +1,8 @@
-
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
         answer: [
-            {text:"Your fists", extrovert: 2},
+            {text:"Your fists", extrovert: 2, int},
             {text:"Archery", introvert: 2 },
             {text:"Sword" ,extrovert: 1 },
             {text:"Knife",  introvert: 1 },
@@ -229,76 +228,9 @@ function resetPrompts(){
 function promptResults(e){
     const btnSelect = e.target;
    
-    //if extrovert was selected
-    if(user_extrovert){
-        btnSelect.classList.add("veryextrovert");
-        extrovert_score = extrovert_score + 2;
+   //need to store the score based on the option selected
+   if()
 
-        
-    }else if(!user_extrovert){
-        btnSelect.classList.add("extrovert");
-        extrovert_score = extrovert_score + 1;
-
-    }else if(user_introvert){
-        btnSelect.classList.add("veryintrovert");
-        introvert_score = introvert_score + 2;
-       
-
-    }else if(!user_introvert){
-        btnSelect.classList.add("introvert");
-        introvert_score = introvert_score + 1;
-
-    }
-    if(user_routine){
-        btnSelect.classList.add("veryroutine");
-        routine_score = routine_score + 2;
-    }else if(!user_routine){
-        btnSelect.classList.add("routine");
-        routine_score = routine_score + 1;
-    }else if(user_spontaneous){
-        btnSelect.classList.add("verySpontaneous");
-        spontaneous_score = spontaneous_score + 2;
-    }else if(!user_spontaneous){
-        btnSelect.classList.add("Spontaneous");
-        spontaneous_score = spontaneous_score + 1;
-    }
-     if(user_leader){
-        btnSelect.classList.add("veryLeader");
-        leader_score = leader_score + 2;
-    }else if(!user_leader){
-        btnSelect.classList.add("Leader");
-        leader_score = leader_score + 1;
-    }else if(user_follower){
-        btnSelect.classList.add("veryfollower");
-        follower_score = follower_score + 2;
-    }else if(!user_follower){
-        btnSelect.classList.add("veryfollower");
-        follower_score = follower_score + 1;
-    }else if(user_purpose){
-        btnSelect.classList.add("veryPurpose");
-        purpose_score = purpose_score + 2;
-    }else if(!user_purpose){
-        btnSelect.classList.add("Purpose");
-        purpose_score = purpose_score + 1;
-    }else if(user_money){
-        btnSelect.classList.add("verymoney");
-        money_score = money_score + 2;
-    }else if(!user_money){
-        btnSelect.classList.add("money");
-        money_score = money_score + 1;
-    }else if(user_creative){
-        btnSelect.classList.add("verycreative");
-        creative_score = creative_score + 2;
-    }else if(!user_creative){
-        btnSelect.classList.add("creative");
-        creative_score = creative_score + 1;
-    }else if(user_analytical){
-        btnSelect.classList.add("veryanalytical");
-        analytical_score = analytical_score + 2;
-    }else if(!user_analytical){
-        btnSelect.classList.add("analytical");
-        analytical_score = analytical_score + 1;
-    }
     
     nextBtn.style.display = "block";
 }
@@ -411,7 +343,6 @@ function careerNames(){
     let i = arr.indexOf(Math.max(...user_score_array));
     return user_trait_array[i];
  }
-
 
 function user_Result(){
     resetPrompts();
