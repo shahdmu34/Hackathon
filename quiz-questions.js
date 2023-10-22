@@ -225,15 +225,7 @@ function resetPrompts(){
 
 
 
-function promptResults(e){
-    const btnSelect = e.target;
-   
-   //need to store the score based on the option selected
-   if()
 
-    
-    nextBtn.style.display = "block";
-}
 
 function careerType(){
     //array holds the answer from user choices
