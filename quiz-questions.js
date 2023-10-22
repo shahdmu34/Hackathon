@@ -295,31 +295,48 @@ function careerType(){
         user_score_array.push("analytical");
 
     }
+    return user_score_array;
 }
 
 function user_Result(){
     resetPrompts();
-    const result = "";
+
+    const user_score_array = careerType();
+
+    //not working
+    let result = "";
     //compare the two arrays to get answer!!
-    if(user_score_array == computerScience){
+    if(arrayCompare(user_score_array , computerScience)){
         result = "Computer Sience"; 
-    }else if(user_score_array == healthCare){
+    }else if(arrayCompare(user_score_array , healthCare)){
         result = "healthcare";
-    }else if(user_score_array == business){
+    }else if(arrayCompare(user_score_array , business)){
         result = "business";
-    }else if(user_score_array == psych){
+    }else if(arrayCompare(user_score_array , psych)){
         result = "psych";
-    }else if(user_score_array == law){
+    }else if(arrayCompare(user_score_array , law)){
         result = "law";
     }
+  
     //output the answer
-    question_elem.innerHTML = `User score ${result}!`;
+    question_elem.innerHTML = `end of quiz! ${result}`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
+function arrayCompare(userArray, careerArray){
+    if(userArray.length !== careerArray.length){
+        return false;
+    }
+    for(let i = 0; i < userArray.length; i++){
+        if(userArray[i] !== careerArray[i]){
+            return false;
+        }
+    }
+    return true;
+}
 function nextBtn_funct(){
     promptInxdex++;
-    if(displayedQuestion < quiz_Questions.length){
+    if(promptInxdex < quiz_Questions.length){
         displayPrompts();
     }else{
         user_Result();
