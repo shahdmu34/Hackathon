@@ -348,5 +348,3 @@ nextBtn.addEventListener("click", ()=>{
 });
 
 beginQuiz();
-
-
