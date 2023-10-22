@@ -299,12 +299,21 @@ function careerType(){
 
 function user_Result(){
     resetPrompts();
+    const result = "";
     //compare the two arrays to get answer!!
     if(user_score_array == computerScience){
-
+        result = "Computer Sience"; 
+    }else if(user_score_array == healthCare){
+        result = "healthcare";
+    }else if(user_score_array == business){
+        result = "business";
+    }else if(user_score_array == psych){
+        result = "psych";
+    }else if(user_score_array == law){
+        result = "law";
     }
     //output the answer
-    question_elem.innerHTML = `END`;
+    question_elem.innerHTML = `User score ${result}!`;
     nextBtn.innerHTML = `Back TO Home Page!`;
    // nextBtn.style.display = "block";
 }
