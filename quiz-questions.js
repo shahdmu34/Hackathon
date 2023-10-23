@@ -1,7 +1,7 @@
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
-        image: "img/image-8.png",
+        image: "img/questionone.png",
         answer: [
             {text:"Your fists", extrovert: true},
             {text:"Archery", extrovert: false },
@@ -12,7 +12,7 @@ const quiz_Questions = [
     },
     {
         question: "Choose a power: ",
-        image: "img/image-4.png",
+        image: "img/questionone.png",
         answer: [
             {text:"Invisibility " , extrovert: false },
             {text:"Healing", extrovert: true },
@@ -23,6 +23,7 @@ const quiz_Questions = [
     },
     {
         question: "You have to pick a road. Do you ",
+        image: "img/image-2.png",
         answer: [
             {text:"Go the direct path you already know but long" , routine: true},
             {text:"Grab a boat and go", routine: false },
@@ -33,6 +34,7 @@ const quiz_Questions = [
     },
     {
         question: "A monster shows up. How should you defeat him",
+        image: "img/image-2.png",
         answer: [
             {text:"Fight him with your weapon", routine: false },
             {text:"Hide", routine: true},
@@ -43,6 +45,7 @@ const quiz_Questions = [
     },
     {
         question: "You  find people that are lost in the forest",
+        image: "img/image-4.png",
         answer: [
             {text:"Do you lead them" , Leader: true},
             {text:"Suggest where they can find help" , Leader: false},
@@ -53,6 +56,7 @@ const quiz_Questions = [
     },
     {
         question: "choose your companion",
+        image: "img/image-4.png",
         answer: [
             {text:"Fast Cat" , Leader:  true},
             {text:"Vision Bird" ,Leader: true},
@@ -63,6 +67,7 @@ const quiz_Questions = [
     },
     {
         question: "A wall you need to cross with a guard",
+        image: "img/image-6.png",
         answer: [
             {text:"Dig a hole and go under", creative: true },
             {text:"Build a ladder with things you find around you" , creative: true },
@@ -73,6 +78,7 @@ const quiz_Questions = [
     },
     {
         question: "You meet a turtle what do you do?",
+        image: "img/image-6.png",
         answer: [
             {text:"Say hi(but judge the turtle)" , creative: false },
             {text:"Ignore the turtle" , creative: false},
@@ -83,6 +89,7 @@ const quiz_Questions = [
     },
     {
         question: "Someone asks for money. Do you",
+        image: "img/image-7.png",
         answer: [
             {text:"give it to them" , purpose: true},
             {text:"Give a little" , purpose: true },
@@ -93,6 +100,7 @@ const quiz_Questions = [
     },
     {
         question: "What is your adventure:",
+        image: "img/image-5.png",
         answer: [
             {text:"Chasing a bounty", purpose: false },
             {text:"Become the strongest in the realm" , purpose: false},
