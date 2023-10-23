@@ -1,0 +1,87 @@
+/* screen - login */
+
+.login {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 1024px;
+    padding: 24px 35px;
+    width: 1440px;
+  }
+  
+  .login .place {
+    cursor: pointer;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 29px;
+  }
+  
+  .login .title {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 208px;
+    margin-top: 205px;
+    min-height: 78px;
+    width: 224px;
+  }
+  
+  .login .flex-row {
+    align-self: center;
+    background-color: var(--powder-blue);
+    gap: 44px;
+    height: 283px;
+    justify-content: flex-end;
+    margin-top: 35px;
+    min-width: 954px;
+    padding: 35px 244px;
+  }
+  
+  .login .flex-col {
+    flex-direction: column;
+    gap: 29px;
+    min-height: 91px;
+    width: 72px;
+  }
+  
+  .login .name {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 31px;
+  }
+  
+  .login .email {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1px;
+    min-height: 31px;
+  }
+  
+  .login .flex-col-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 4px;
+    min-height: 101px;
+    width: 345px;
+  }
+  
+  .login .rectangle-62 {
+    height: 42px;
+  }
+  
+  .login .rectangle-63 {
+    height: 39px;
+  }
+  
+  .login .flex {
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .login .rectangle {
+    background-color: var(--white);
+    width: 345px;
+  }
+  

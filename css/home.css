@@ -1,5 +1,229 @@
-body{
-    background-image: url('homepage.png');
+/* screen - home */
+
+.home {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    height: 2338px;
+    width: 1440px;
+  }
+  
+  .home .overlap-group1 {
+    align-items: flex-start;
+    background-image: url("../img/image-1.png");
+    background-position: 50% 50%;
     background-size: cover;
-    background-repeat: no-repeat;
-}
+    display: flex;
+    gap: 513px;
+    height: 922px;
+    min-width: 1440px;
+    padding: 19px 30px;
+  }
+  
+  .home .place-container {
+    height: 29px;
+    position: relative;
+    width: 67px;
+  }
+  
+  .home .place {
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .home .flex-col {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    min-height: 554px;
+    width: 769px;
+  }
+  
+  .home .log-in {
+    align-self: center;
+    color: #646464;
+    cursor: pointer;
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 26.0px;
+    min-height: 29px;
+    min-width: 69px;
+  }
+  
+  .home .have-you-considered {
+    color: var(--chicago);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 168px;
+    min-height: 168px;
+    width: 769px;
+  }
+  
+  .home .overlap-group2 {
+    height: 189px;
+    position: relative;
+    width: 698px;
+  }
+  
+  .home .take-a-quick-quiz-an {
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 698px;
+  }
+  
+  .home .rectangle-47 {
+    height: 50px;
+    left: 120px;
+    position: absolute;
+    top: 139px;
+    width: 144px;
+  }
+  
+  .home .start-quiz {
+    color: #646464;
+    cursor: pointer;
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    left: 142px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 140px;
+    white-space: nowrap;
+    width: 122px;
+  }
+  
+  .home .overlap-group {
+    height: 1390px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .home .rectangle-36 {
+    height: 499px;
+    left: 0;
+    position: absolute;
+    top: 114px;
+    width: 1440px;
+  }
+  
+  .home .rectangle-49 {
+    height: 795px;
+    left: 0;
+    position: absolute;
+    top: 595px;
+    width: 1388px;
+  }
+  
+  .home .rectangle-48 {
+    height: 499px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .home .rectangle-37 {
+    background-color: var(--powder-blue);
+    height: 506px;
+    left: 206px;
+    position: absolute;
+    top: 284px;
+    width: 264px;
+  }
+  
+  .home .rectangle-38 {
+    background-color: var(--powder-blue);
+    height: 506px;
+    left: 578px;
+    position: absolute;
+    top: 323px;
+    width: 264px;
+  }
+  
+  .home .rectangle-39 {
+    background-color: var(--powder-blue);
+    height: 506px;
+    left: 961px;
+    position: absolute;
+    top: 284px;
+    width: 262px;
+  }
+  
+  .home .rectangle-40 {
+    background-color: #b1daec80;
+    height: 788px;
+    left: 0;
+    position: absolute;
+    top: 602px;
+    width: 1440px;
+  }
+  
+  .home .then-take-the-next-s {
+    left: 978px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 433px;
+    width: 237px;
+  }
+  
+  .home .what-challenges-or-a {
+    left: 583px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 433px;
+    width: 264px;
+  }
+  
+  .home .determine-what-field {
+    left: 233px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 433px;
+    width: 237px;
+  }
+  
+  .home .image-8 {
+    left: 122px;
+  }
+  
+  .home .image-9 {
+    left: 891px;
+  }
+  
+  .home .image-9-1 {
+    height: 407px;
+    left: 464px;
+    object-fit: cover;
+    position: absolute;
+    top: 50px;
+    width: 478px;
+  }
+  
+  .home .image {
+    height: 307px;
+    object-fit: cover;
+    position: absolute;
+    top: 95px;
+    width: 377px;
+  }
+  

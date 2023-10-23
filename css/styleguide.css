@@ -1,0 +1,64 @@
+:root { 
+    --alto: #d9d9d9;
+    --black: #000000;
+    --cape-cod: #424242;
+    --chicago: #5e5e5e;
+    --powder-blue: #b1daec;
+    --white: #ffffff;
+   
+    --font-size-l: 30px;
+    --font-size-m: 24px;
+    --font-size-xl: 40px;
+    --font-size-xxl: 60px;
+   
+    --font-family-inika: "Inika", Helvetica;
+    --font-family-inter: "Inter", Helvetica;
+  }
+  .inika-normal-black-24px {
+    color: var(--black);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .inika-normal-black-30px {
+    color: var(--black);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .inika-bold-black-60px {
+    color: var(--black);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .inika-bold-white-60px {
+    color: var(--white);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .inter-normal-cape-cod-24px {
+    color: var(--cape-cod);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .inika-normal-chicago-40px {
+    color: var(--chicago);
+    font-family: var(--font-family-inika);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+  }
+  
