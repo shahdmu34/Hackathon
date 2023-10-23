@@ -1,6 +1,7 @@
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
+        image: "img/image-8.png",
         answer: [
             {text:"Your fists", extrovert: true},
             {text:"Archery", extrovert: false },
@@ -11,6 +12,7 @@ const quiz_Questions = [
     },
     {
         question: "Choose a power: ",
+        image: "img/image-4.png",
         answer: [
             {text:"Invisibility " , extrovert: false },
             {text:"Healing", extrovert: true },
@@ -102,32 +104,6 @@ const quiz_Questions = [
     
 
 ];
-/*
-const careerOptions = [
-    {
-        career_array: ["introver","spontaneous","follower", "money", "analytical"],
-        career: "Computer Science"
-    },
-    {
-        career_array: ["extrovert", "spontaneous" , "follower" , "purpose", "analytical"],
-        career: "HealthCare"
-    },
-    {
-        career_array: ["extrovert", "spontaneous", "money" , "creative"],
-        career: "Business"
-    },{
-        career_array: ["creative" , "routine", "leader", "purpose","analytical" ],
-        career: "Psych"
-    },
-    {
-        career_array: ["introvert", "routine", "follower", "purpose", "analytical"  ],
-        career: "Psych"
-    },{
-        career_array: ["extrovert", "spontaneous" , "leader", "purpose" , "creative"  ],
-        career: "Psych"
-    }
-]
-*/
 //pulling in html
 const question_elem = document.getElementById("question");
 const userAnswer = document.getElementById("answerBtns");
@@ -184,11 +160,15 @@ function displayPrompts(){
     let displayedQuestion = quiz_Questions[promptInxdex];
     let promptNum = promptInxdex + 1;
     question_elem.innerHTML = promptNum + ": " + displayedQuestion.question;
+    document.getElementById('bg').style.backgroundImage = `url(${displayedQuestion.image})`;
     displayedQuestion.answer.forEach(answers =>{
         const btn = document.createElement("button");
+       
+
         btn.innerHTML = answers.text;
         btn.classList.add("btn");
         userAnswer.appendChild(btn);
+
 
         //store score for each trait
         if(answers.extrovert){
