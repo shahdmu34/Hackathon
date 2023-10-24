@@ -1,7 +1,7 @@
 const quiz_Questions = [
     {
         question: "You need a weapon what do you choose:",
-        image: "img/questionone.png",
+        image: "img/illustration.png",
         answer: [
             {text:"Your fists", extrovert: true},
             {text:"Archery", extrovert: false },
@@ -12,7 +12,7 @@ const quiz_Questions = [
     },
     {
         question: "Choose a power: ",
-        image: "img/questionone.png",
+        image: "img/illustration.png",
         answer: [
             {text:"Invisibility " , extrovert: false },
             {text:"Healing", extrovert: true },
@@ -100,7 +100,7 @@ const quiz_Questions = [
     },
     {
         question: "What is your adventure:",
-        image: "img/image-5.png",
+        image: "img/illustration2.png",
         answer: [
             {text:"Chasing a bounty", purpose: false },
             {text:"Become the strongest in the realm" , purpose: false},
