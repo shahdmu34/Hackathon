@@ -355,7 +355,7 @@ function user_Result(){
 
     const careerSuggestion = suggestCareer();
 
-    question_elem.innerHTML = `End of quiz! ${careerSuggestion}`;
+    question_elem.innerHTML = `Your Result: ${careerSuggestion}`;
     nextBtn.innerHTML = `Back To Home Page!`;
 }
    

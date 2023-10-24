@@ -10,3 +10,52 @@
     height: 100%;
     z-index: -1;
 }
+
+.contianer-quiz{
+    margin-left: 600px;
+}
+.btn{
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    min-width: 150px;
+    height: 40px; 
+    outline: none;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 10px;
+    display: block;
+    margin-top: 20px;
+
+  
+  
+  }
+
+
+
+.btn:hover
+{
+    box-shadow: 1px 5px 7px 1px rgba(0,0,0,0.2);
+  }
+  
+#next_question{
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    min-width: 150px;
+    height: 40px; 
+    outline: none;
+    background: rgba(240, 234, 234, 0.7);
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 10px;
+    display: block;
+    margin-top: 20px;
+}
+
+
+#next_question:hover
+{
+    box-shadow: 1px 5px 7px 1px rgba(0,0,0,0.2);
+  }
