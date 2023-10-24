@@ -3,32 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <title>hackathon site-Login</title>
-        <link ref="stylesheet" href="/css/index_style.css">
+        <link rel="stylesheet" href="/css/index_style.css">
     </head>
     <body>
+        <header>
+            <h1 class="title">Edu-Venture</h1>
+        </header>
 
-        <form>
-            <div class="container-auth">
-                <h1>Login</h1>
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter Email Address" required>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter Password" required>
+        <div class="contianer">
+            <form>
+                <div class="container-auth">
+                    <h1>Edu-Venture</h1>
+                    <h2>Log In</h2>
+                    <div class="user-input">
+                    <input type="email" id="email" placeholder="Enter Email Address" required>
+                    </div>
 
-                <button type="button" id="submitBtn" name="submitBtn" class="registeration-btn">Log In</button>
+                    <div class="user-input">
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="user-input">
+                    <button type="button" id="submitBtn" name="submitBtn" class="registeration-btn">Registar Account</button>
+                    </div>
+                    <div class="login-continer">
+                        <p>Dont have an account?  <a href="login.html">Register here!</a></p>
+                    </div>
 
+                </div>
 
-            </div>
-
-            <div class="login-container">
-                <p>Register Account <a href="index.html">Register!</a></p>
-            </div>
-        </form>
-
+               
+            </form>
+        </div>
 
     </body>
-
     
     <script type="module">
          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
