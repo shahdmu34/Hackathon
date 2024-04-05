@@ -1,100 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>hackathon site-register</title>
-        <link rel="stylesheet" type="text/css" href="css/index_style.css" />
-        
-    </head>
-    <body>
-        <header>
-            <h1 class="title">Edu-Venture</h1>
-        </header>
-
-        <div class="contianer">
-            <form>
-                <div class="container-auth">
-                    <h1>Edu-Venture</h1>
-                    <h2>Registar Account</h2>
-                    <div class="user-input">
-                    <input type="email" id="email" placeholder="Enter Email Address" required>
-                    </div>
-
-                    <div class="user-input">
-                    <input type="password" id="password" placeholder="Enter Password" required>
-                    </div>
-                    <div class="user-input">
-                    <button type="button" id="submitBtn" name="submitBtn" class="registeration-btn">Registar Account</button>
-                    </div>
-                    <div class="login-continer">
-                        <p>Already have an account?  <a href="login.html">Log In here!</a></p>
-                    </div>
-
-                </div>
-
-               
-            </form>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="home" />
+    <div class="container-center-horizontal">
+      <div class="home screen">
+        <div class="overlap-group1">
+          <div class="place-container inter-normal-cape-cod-24px">
+            <div class="place">Home</div>
+            <div class="place">Home</div>
+          </div>
+          <div class="flex-col">
+            <a href="login.html" class="align-self-flex-center"><div class="log-in">Log in</div> </a>
+            <h1 class="have-you-considered">Have you considered which career suits you best?</h1>
+            <div class="overlap-group2">
+              <p class="take-a-quick-quiz-an inika-normal-chicago-40px">
+                Take a quick quiz and learn more about yourself
+              </p>
+              <img class="rectangle-47" src="img/rectangle-47.png" alt="Rectangle 47" />
+              <a href="quiz.html"><div class="start-quiz">Start Quiz</div> </a>
+            </div>
+          </div>
         </div>
-
-    </body>
-
-    <script type="module">
-        //--------fire base implementation---------
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-        import { getAuth,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-        import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDwyXGj2guoVrSpDU4re9ogrfyTXXR6mX8",
-          authDomain: "hackathon-2023-a5664.firebaseapp.com",
-          projectId: "hackathon-2023-a5664",
-          storageBucket: "hackathon-2023-a5664.appspot.com",
-          messagingSenderId: "426010680745",
-          appId: "1:426010680745:web:b8cc6775fa0621b588b8b8"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        //initialize user authantication
-        const auth = getAuth(app);
-        //intilize database
-        const database = getDatabase(app);
-
-        submitBtn.addEventListener('click', (e) =>{
-
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed up 
-                    const user = userCredential.user;
-
-                    set(ref(database,'Users/' + user.uid), {
-                        email: email,
-                        password:password
-
-                    })
-                    .then(() =>{
-                        alert('User created!');
-                        window.location.href = "login.html";
-                        //user was created
-                    })
-                    .catch((error) => {
-                        alert(errorMessage);
-                        //error in creating user
-                    });
-                   
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    alert(errorMessage)
-                });
-        })
-      </script>
-
+        <div class="overlap-group inika-normal-chicago-40px">
+          <img class="rectangle-36" src="img/rectangle-36.svg" alt="Rectangle 36" />
+          <img class="rectangle-49" src="img/rectangle-49.svg" alt="Rectangle 49" />
+          <img class="rectangle-48" src="img/rectangle-48.svg" alt="Rectangle 48" />
+          <div class="rectangle-37"></div>
+          <div class="rectangle-38"></div>
+          <div class="rectangle-39"></div>
+          <div class="rectangle-40"></div>
+          <p class="then-take-the-next-s">Then take the next step in your journey towards that dream</p>
+          <p class="what-challenges-or-a">What challenges or achievments youd like to accomplish.</p>
+          <p class="determine-what-field">Determine what field you would like to study.</p>
+          <img class="image-8 image" src="img/image-8.png" alt="image 8" />
+          <img class="image-9 image" src="img/image-8.png" alt="image 9" />
+          <img class="image-9-1" src="img/image-9@2x.png" alt="image 9" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
